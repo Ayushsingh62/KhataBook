@@ -31,7 +31,7 @@ const [transactions , setTransaction]=useState([
 ])
 
 const addTransaction =(text , amount)=>{
-setTransaction([{id:crypto.randomUUID() , text:text , amount:amount , ...transactions}])
+setTransaction([{id:crypto.randomUUID() , text:text , amount:amount }, ...transactions])
 
 console.log(text , amount)
 }
@@ -51,7 +51,10 @@ const updateTransaction=(updatedTransaction)=>{
         transaction.id === updatedTransaction.id
           ? updatedTransaction
           : transaction
-      ));
+      )
+    
+    
+    )
 
       setEdit({isEdit:false , transaction:{}})
 

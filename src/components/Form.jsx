@@ -8,12 +8,12 @@ const Form = ({ addTransaction, edit, updateTransaction }) => {
     e.preventDefault()
     if (edit.isEdit === false) {
       addTransaction(text, parseInt(amount))
-      console.log(text , amount)
+      // console.log(text , amount ,)
      } 
     else {
       updateTransaction({
        id: edit.transaction.id ,
-       amount:amount,
+       amount: parseInt(amount),
        text: text, }
       )
     }
